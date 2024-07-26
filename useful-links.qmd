@@ -8,7 +8,7 @@ Download and install R 4.2.1: <https://cran.r-project.org/>
 
 Download and install the preview build of RStudio: <https://posit.co/download/rstudio-desktop/>
 
-## About Packages
+## About R Packages
 
 | Package | Source                                                  |
 |---------|---------------------------------------------------------|
