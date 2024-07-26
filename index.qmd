@@ -20,7 +20,7 @@ He also co-hosts The Gateway podcast, launched in 2021, aimed at exposing studen
 ## Office Hours
 
 | Instructor        | Booking URL                                                                                             |
-|---------------------------------------|---------------------------------|
+|-------------------|---------------------------------------------------------------------------------------------------------|
 | Dr. Biagio Palese | [Book Here](https://outlook.office365.com/book/OfficeHoursSpring20241@mail.niu.edu/?ae=true&login_hint) |
 | Venkata Nekkanti  | [Book Here](https://outlook.office365.com/book/OfficeHoursSpring20241@mail.niu.edu/?ae=true&login_hint) |
 

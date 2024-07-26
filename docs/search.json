@@ -2,9 +2,13 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "omis-482",
+    "title": "Faculty",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+    "text": "Dr. B - Dr. B’s teaching and research interests embrace information systems, data analytics, artificial intelligence, creators’ economy, systems beyond firms control and customer service.\nHe’s a tidyverse certified instructor trainer, teaches coding workshops globally, introducing students to the tidyverse. Passionate about teaching and research, he involves students in open-source software projects. Experiences in diverse teams contribute to his academic and personal growth.\nHe also co-hosts The Gateway podcast, launched in 2021, aimed at exposing students to technology trends and topics, accessible online on major podcasting platforms.",
+    "crumbs": [
+      "Course Overview",
+      "Faculty"
+    ]
   },
   {
     "objectID": "useful-links.html",
@@ -84,44 +88,28 @@
     "href": "faculty.html",
     "title": "Faculty",
     "section": "",
-    "text": "Dr. B - Dr. B’s teaching and research interests embrace information systems, data analytics, artificial intelligence, creators’ economy, systems beyond firms control and customer service.\nHe’s a tidyverse certified instructor trainer, teaches coding workshops globally, introducing students to the tidyverse. Passionate about teaching and research, he involves students in open-source software projects. Experiences in diverse teams contribute to his academic and personal growth.\nHe also co-hosts The Gateway podcast, launched in 2021, aimed at exposing students to technology trends and topics, accessible online on major podcasting platforms.",
-    "crumbs": [
-      "Course Overview",
-      "Faculty"
-    ]
+    "text": "Dr. B - Dr. B’s teaching and research interests embrace information systems, data analytics, artificial intelligence, creators’ economy, systems beyond firms control and customer service.\nHe’s a tidyverse certified instructor trainer, teaches coding workshops globally, introducing students to the tidyverse. Passionate about teaching and research, he involves students in open-source software projects. Experiences in diverse teams contribute to his academic and personal growth.\nHe also co-hosts The Gateway podcast, launched in 2021, aimed at exposing students to technology trends and topics, accessible online on major podcasting platforms."
   },
   {
     "objectID": "faculty.html#instructor",
     "href": "faculty.html#instructor",
     "title": "Faculty",
     "section": "",
-    "text": "Dr. B - Dr. B’s teaching and research interests embrace information systems, data analytics, artificial intelligence, creators’ economy, systems beyond firms control and customer service.\nHe’s a tidyverse certified instructor trainer, teaches coding workshops globally, introducing students to the tidyverse. Passionate about teaching and research, he involves students in open-source software projects. Experiences in diverse teams contribute to his academic and personal growth.\nHe also co-hosts The Gateway podcast, launched in 2021, aimed at exposing students to technology trends and topics, accessible online on major podcasting platforms.",
-    "crumbs": [
-      "Course Overview",
-      "Faculty"
-    ]
+    "text": "Dr. B - Dr. B’s teaching and research interests embrace information systems, data analytics, artificial intelligence, creators’ economy, systems beyond firms control and customer service.\nHe’s a tidyverse certified instructor trainer, teaches coding workshops globally, introducing students to the tidyverse. Passionate about teaching and research, he involves students in open-source software projects. Experiences in diverse teams contribute to his academic and personal growth.\nHe also co-hosts The Gateway podcast, launched in 2021, aimed at exposing students to technology trends and topics, accessible online on major podcasting platforms."
   },
   {
     "objectID": "faculty.html#teaching-assistant",
     "href": "faculty.html#teaching-assistant",
     "title": "Faculty",
     "section": "Teaching Assistant",
-    "text": "Teaching Assistant\nVenkata Surya Vineel Nekkanti",
-    "crumbs": [
-      "Course Overview",
-      "Faculty"
-    ]
+    "text": "Teaching Assistant\nVenkata Surya Vineel Nekkanti"
   },
   {
     "objectID": "faculty.html#office-hours",
     "href": "faculty.html#office-hours",
     "title": "Faculty",
     "section": "Office Hours",
-    "text": "Office Hours\n\n\n\nInstructor\nBooking URL\n\n\n\n\nDr. Biagio Palese\nBook Here\n\n\nVenkata Nekkanti\nBook Here\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nWhen booking office hours, double-check the name of the staff member you want to book the office hours with using the “Select Staff” dropdown.",
-    "crumbs": [
-      "Course Overview",
-      "Faculty"
-    ]
+    "text": "Office Hours\n\n\n\nInstructor\nBooking URL\n\n\n\n\nDr. Biagio Palese\nBook Here\n\n\nVenkata Nekkanti\nBook Here\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nWhen booking office hours, double-check the name of the staff member you want to book the office hours with using the “Select Staff” dropdown."
   },
   {
     "objectID": "student-dashboard.html",
@@ -282,6 +270,50 @@
     "crumbs": [
       "Course Materials",
       "Practice R"
+    ]
+  },
+  {
+    "objectID": "useful-links.html#about-r-packages",
+    "href": "useful-links.html#about-r-packages",
+    "title": "Useful links",
+    "section": "About R Packages",
+    "text": "About R Packages\n\n\n\nPackage\nSource\n\n\n\n\ntidyr\ndplyr.tidyverse.org\n\n\nggplot2\nggplot2.tidyverse.org",
+    "crumbs": [
+      "Course Overview",
+      "Useful Links"
+    ]
+  },
+  {
+    "objectID": "index.html#instructor",
+    "href": "index.html#instructor",
+    "title": "Faculty",
+    "section": "",
+    "text": "Dr. B - Dr. B’s teaching and research interests embrace information systems, data analytics, artificial intelligence, creators’ economy, systems beyond firms control and customer service.\nHe’s a tidyverse certified instructor trainer, teaches coding workshops globally, introducing students to the tidyverse. Passionate about teaching and research, he involves students in open-source software projects. Experiences in diverse teams contribute to his academic and personal growth.\nHe also co-hosts The Gateway podcast, launched in 2021, aimed at exposing students to technology trends and topics, accessible online on major podcasting platforms.",
+    "crumbs": [
+      "Course Overview",
+      "Faculty"
+    ]
+  },
+  {
+    "objectID": "index.html#teaching-assistant",
+    "href": "index.html#teaching-assistant",
+    "title": "Faculty",
+    "section": "Teaching Assistant",
+    "text": "Teaching Assistant\nVenkata Surya Vineel Nekkanti",
+    "crumbs": [
+      "Course Overview",
+      "Faculty"
+    ]
+  },
+  {
+    "objectID": "index.html#office-hours",
+    "href": "index.html#office-hours",
+    "title": "Faculty",
+    "section": "Office Hours",
+    "text": "Office Hours\n\n\n\nInstructor\nBooking URL\n\n\n\n\nDr. Biagio Palese\nBook Here\n\n\nVenkata Nekkanti\nBook Here\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nWhen booking office hours, double-check the name of the staff member you want to book the office hours with using the “Select Staff” dropdown.",
+    "crumbs": [
+      "Course Overview",
+      "Faculty"
     ]
   }
 ]

@@ -22,7 +22,7 @@ website:
         contents:
         - href: course-overview.qmd
           text: Course Overview
-        - href: faculty.qmd
+        - href: index.qmd
           text: Faculty
         - href: "files/OMIS482_SyllabusSpring2024_BiagioPalese_03_29.pdf"
           text: Syllabus
