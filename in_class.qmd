@@ -1,0 +1,69 @@
+---
+title: "One Stop for Materials"
+format: html
+editor: visual
+---
+
+## In-class Materials
+### Week 1
+<div>
+  Course Introduction & Getting Started:
+  <a href="https://webcourses.niu.edu/ultra/courses/_348339_1/outline/assessment/test/_10044533_1?courseId=_348339_1&gradeitemView=details" target="_blank" class="btn btn-primary" style="margin-left: 10px;">Access here</a>
+</div>
+### Week 2
+<div>
+  Basic Manipulations:
+  <a href="https://webcourses.niu.edu/ultra/courses/_348339_1/outline/assessment/test/_10044545_1?courseId=_348339_1&gradeitemView=details" target="_blank" class="btn btn-primary" style="margin-left: 10px;">Access here</a>
+</div>
+### Week 3
+<div>
+  Intermediate Manipulations:
+  <a href="https://webcourses.niu.edu/ultra/courses/_348339_1/outline/assessment/test/_10044552_1?courseId=_348339_1&gradeitemView=details" class="btn btn-primary" style="margin-left: 10px;">Access here</a>
+</div>
+### Week 4
+<div>
+  Manipulations Review:
+  <a href="https://posit.cloud/spaces/81045/content/7463365" target="_blank" class="btn btn-primary" style="margin-left: 10px;">Access here</a>
+</div>
+### Week 5
+<div>
+  Basic Visualizations:
+  <a href="https://google.com" target="_blank" class="btn btn-primary" style="margin-left: 10px;">Access here</a>
+</div>
+### Week 6
+<div>
+  Intermediate Visualizations:
+  <a href="https://google.com" target="_blank" class="btn btn-primary" style="margin-left: 10px;">Access here</a>
+</div>
+
+## Weekly Activities
+### Activity 1
+<div>
+  Course Introduction & Getting Started:
+  <a href="https://webcourses.niu.edu/ultra/courses/_348339_1/outline/assessment/test/_10044533_1?courseId=_348339_1&gradeitemView=details" target="_blank" class="btn btn-primary" style="margin-left: 10px;">Access here</a>
+</div>
+### Activity 2
+<div>
+  Basic Manipulations:
+  <a href="https://webcourses.niu.edu/ultra/courses/_348339_1/outline/assessment/test/_10044545_1?courseId=_348339_1&gradeitemView=details" target="_blank" class="btn btn-primary" style="margin-left: 10px;">Access here</a>
+</div>
+### Activity 3
+<div>
+  Intermediate Manipulations:
+  <a href="https://webcourses.niu.edu/ultra/courses/_348339_1/outline/assessment/test/_10044552_1?courseId=_348339_1&gradeitemView=details" class="btn btn-primary" style="margin-left: 10px;">Access here</a>
+</div>
+### Activity 4
+<div>
+  Manipulations Review:
+  <a href="https://posit.cloud/spaces/81045/content/7463365" target="_blank" class="btn btn-primary" style="margin-left: 10px;">Access here</a>
+</div>
+### Activity 5
+<div>
+  Basic Visualizations:
+  <a href="https://google.com" target="_blank" class="btn btn-primary" style="margin-left: 10px;">Access here</a>
+</div>
+### Activity 6
+<div>
+  Intermediate Visualizations:
+  <a href="https://google.com" target="_blank" class="btn btn-primary" style="margin-left: 10px;">Access here</a>
+</div>

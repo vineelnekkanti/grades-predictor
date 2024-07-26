@@ -1,0 +1,12 @@
+---
+title: "Course overview"
+---
+
+OMIS-482 Predictive Business Analytics Machine Learning: THE CONTENT ABOUT THE COURSE GOES HERE
+
+## Class Details
+
+| Meeting             | Location         | Time                     |
+|---------------------|------------------|--------------------------|
+| Week's First Class  | Barsema Hall 333 | Tuesday 9:30 - 10:45 pm  |
+| Week's Second Class | Barsema Hall 333 | Thursday 9:30 - 10:45 pm |

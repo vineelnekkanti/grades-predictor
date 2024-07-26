@@ -1,0 +1,86 @@
+[
+  {
+    "objectID": "course-overview.html",
+    "href": "course-overview.html",
+    "title": "Course overview",
+    "section": "",
+    "text": "Advanced Predictive Data Analytics for Business: Some content should go in here"
+  },
+  {
+    "objectID": "course-overview.html#class-meetings",
+    "href": "course-overview.html#class-meetings",
+    "title": "Untitled",
+    "section": "Class meetings",
+    "text": "Class meetings\n\n\n\nMeeting\nLocation\nTime\n\n\n\n\nFirst Class\nBarsema Hall 333\nTuesday 5:00 - 6:15 pm\n\n\nSecond Class\nBarsema Hall 333\nThursday 5:00 - 6:15 pm"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "course-overview.html#class-details",
+    "href": "course-overview.html#class-details",
+    "title": "Course overview",
+    "section": "Class Details",
+    "text": "Class Details\n\n\n\nMeeting\nLocation\nTime\n\n\n\n\nFirst Class\nBarsema Hall 333\nTuesday 5:00 - 6:15 pm\n\n\nSecond Class\nBarsema Hall 333\nThursday 5:00 - 6:15 pm"
+  },
+  {
+    "objectID": "faculty.html",
+    "href": "faculty.html",
+    "title": "Faculty",
+    "section": "",
+    "text": "Dr. B - Dr. B’s teaching and research interests embrace information systems, data analytics, artificial intelligence, creators’ economy, systems beyond firms control and customer service.\nHe’s a tidyverse certified instructor trainer, teaches coding workshops globally, introducing students to the tidyverse. Passionate about teaching and research, he involves students in open-source software projects. Experiences in diverse teams contribute to his academic and personal growth.\nHe also co-hosts The Gateway podcast, launched in 2021, aimed at exposing students to technology trends and topics, accessible online on major podcasting platforms."
+  },
+  {
+    "objectID": "faculty.html#instructor",
+    "href": "faculty.html#instructor",
+    "title": "Faculty",
+    "section": "",
+    "text": "Dr. B - Dr. B’s teaching and research interests embrace information systems, data analytics, artificial intelligence, creators’ economy, systems beyond firms control and customer service.\nHe’s a tidyverse certified instructor trainer, teaches coding workshops globally, introducing students to the tidyverse. Passionate about teaching and research, he involves students in open-source software projects. Experiences in diverse teams contribute to his academic and personal growth.\nHe also co-hosts The Gateway podcast, launched in 2021, aimed at exposing students to technology trends and topics, accessible online on major podcasting platforms."
+  },
+  {
+    "objectID": "faculty.html#teaching-assistant",
+    "href": "faculty.html#teaching-assistant",
+    "title": "Faculty",
+    "section": "Teaching Assistant",
+    "text": "Teaching Assistant\nVenkata Surya Vineel Nekkanti"
+  },
+  {
+    "objectID": "faculty.html#office-hours",
+    "href": "faculty.html#office-hours",
+    "title": "Faculty",
+    "section": "Office Hours",
+    "text": "Office Hours\n\n\n\nInstructor\nBooking URL\n\n\n\n\nDr. Biagio Palese\nTEAMS URL HERE\n\n\nVenkata Nekkanti\nTEAMS URL HERE"
+  },
+  {
+    "objectID": "useful-links.html",
+    "href": "useful-links.html",
+    "title": "Useful links",
+    "section": "",
+    "text": "Package\nSource\n\n\n\n\ntidyr\ndplyr.tidyverse.org\n\n\nggplot2\nggplot2.tidyverse.org"
+  },
+  {
+    "objectID": "useful-links.html#about-packages",
+    "href": "useful-links.html#about-packages",
+    "title": "Useful links",
+    "section": "",
+    "text": "Package\nSource\n\n\n\n\ntidyr\ndplyr.tidyverse.org\n\n\nggplot2\nggplot2.tidyverse.org"
+  },
+  {
+    "objectID": "useful-links.html#cheat-sheets",
+    "href": "useful-links.html#cheat-sheets",
+    "title": "Useful links",
+    "section": "Cheat Sheets",
+    "text": "Cheat Sheets\nThe following cheatsheets come from https://www.rstudio.com/resources/cheatsheets. We haven’t covered every function and functionality listed on them, but you might still find them useful as references."
+  },
+  {
+    "objectID": "useful-links.html#office-hours",
+    "href": "useful-links.html#office-hours",
+    "title": "Useful links",
+    "section": "Office Hours",
+    "text": "Office Hours\n\n\n\nInstructor\nBooking URL\n\n\n\n\nDr. Biagio Palese\nTEAMS URL HERE\n\n\nVenkata Nekkanti\nTEAMS URL HERE"
+  }
+]

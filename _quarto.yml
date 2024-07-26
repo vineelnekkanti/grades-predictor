@@ -1,0 +1,62 @@
+project:
+  type: website
+  output-dir: docs
+website:
+  page-navigation: true
+  title: "OMIS-681"
+  page-footer:
+    background: "#343a40"
+    right: "Created by: Venkata Surya Vineel Nekkanti"
+    left: "&copy; Copyright 2024, Dr. B"
+    center: "For Further Queries: bpalese@niu.edu"
+
+  sidebar:
+    background: "#343a40" 
+    logo: "images/logo_2.png"
+    pinned: true
+    align: centre
+    style: docked
+    search: true
+    contents:
+      - section: "Course Overview"
+        contents:
+        - href: course-overview.qmd
+          text: Course Overview
+        - href: faculty.qmd
+          text: Faculty
+        - href: "files/OMIS482_SyllabusSpring2024_BiagioPalese_03_29.pdf"
+          text: Syllabus
+          target: _blank
+        - href: schedule.qmd
+          text: Schedule
+        - href: student-dashboard.qmd
+          text: Dr.B's Leaderboard
+        - href: useful-links.qmd
+          text: Useful Links
+      - section: "Course Materials"
+        contents:
+        - href: in_class.qmd
+          text: In-class & Weekly
+        - href: practice_R.qmd
+          text: Practice R
+    tools:
+        - icon: backpack-fill
+          text: "Blackboard"
+          url: https://webcourses.niu.edu/ultra/courses/_348339_1/outline
+
+
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: darkly
+    toc: true
+    code-copy: true
+    code-overflow: wrap
+    code-link: true
+    css: styles.css
+  
+execute:
+  freeze: auto
+
+editor: visual

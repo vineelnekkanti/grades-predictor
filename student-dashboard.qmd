@@ -1,0 +1,277 @@
+---
+title: "Dr. B's Leaderboard"
+format: html
+ojs: true
+---
+
+```{r, Calling the packages}
+#| include: false
+#| echo: false
+
+library(tidyverse)
+library(readxl)
+library(dplyr)
+library(gt)
+```
+
+```{r, Data pre-processing}
+#| include: false
+#| echo: false
+data <- read_excel("files/students_participation_tracker.xlsx", sheet="Sheet1")
+
+modified_data <- data |>
+  rename(
+    Name = "Nick Name",
+    week_1 = "Week1_activities",
+    week_2 = "Week2_activities",
+    week_3 = "Week3_activities",
+    week_6 = "Week6_activities",
+    tech_test = "Technology test",
+    preliminary_survey = "Preliminary survey",
+    midterm_survey = "Midterm survey",
+    exit_survey = "Exit Survey",
+    in_class_participation = "In-class participation",
+    teams_participation = "Teams participationon"
+  ) |>
+  mutate(
+    "Weekly Activity Overall" = week_1 + week_2 + week_3 + week_6,
+    "Survey/Poll/Tech. Test" = tech_test + preliminary_survey + midterm_survey + exit_survey,
+    "In-Class Participation" = in_class_participation,
+    "Teams Participation" = teams_participation
+  )
+
+```
+
+```{r, Create Tables}
+#| include: false
+#| echo: false
+final_weekly_activity_table <- modified_data |> 
+  select(Name, `Weekly Activity Overall`) |> 
+  arrange(desc(`Weekly Activity Overall`)) |> 
+  mutate(Rank = dense_rank(desc(`Weekly Activity Overall`)), 
+         Points = round(`Weekly Activity Overall`, 2)) |> 
+  select(Rank, Name, Points) |> 
+  filter(!is.na(Name))
+
+final_survey_test_table <- modified_data |> 
+  select(Name, `Survey/Poll/Tech. Test`) |> 
+  arrange(desc(`Survey/Poll/Tech. Test`)) |> 
+  mutate(Rank = dense_rank(desc(`Survey/Poll/Tech. Test`)), 
+         Points = round(`Survey/Poll/Tech. Test`, 2)) |> 
+  select(Rank, Name, Points) |> 
+  filter(!is.na(Name))
+
+final_inclass_participation_table <- modified_data |> 
+  select(Name, `In-Class Participation`) |> 
+  arrange(desc(`In-Class Participation`)) |> 
+  mutate(Rank = dense_rank(desc(`In-Class Participation`)), 
+         Points = round(`In-Class Participation`, 2)) |> 
+  select(Rank, Name, Points) |> 
+  filter(!is.na(Name))
+
+final_teams_participation_table <- modified_data |> 
+  select(Name, `Teams Participation`) |> 
+  arrange(desc(`Teams Participation`)) |> 
+  mutate(Rank = dense_rank(desc(`Teams Participation`)), 
+         Points = round(`Teams Participation`, 2)) |> 
+  select(Rank, Name, Points) |> 
+  filter(!is.na(Name))
+
+final_professionalism_table <- modified_data |> 
+  select(Name, Professionalism) |> 
+  arrange(desc(Professionalism)) |> 
+  mutate(Rank = dense_rank(desc(Professionalism)), 
+         Points = round(Professionalism, 2)) |> 
+  select(Rank, Name, Points) |> 
+  filter(!is.na(Name))
+
+final_overall_performance_table <- modified_data |> 
+  mutate(Points= `Weekly Activity Overall`+ `Survey/Poll/Tech. Test` + `In-Class Participation` + `Teams Participation` + Professionalism) |> 
+  arrange(desc(Points)) |> 
+  mutate(Rank = dense_rank(desc(Points)), 
+         Points = round(Points, 2)) |> 
+  select(Rank, Name, Points) |> 
+  filter(!is.na(Name))
+
+```
+
+
+```{r, Create gt tables}
+#| include: false
+#| echo: false
+final_weekly_activity_table_gt <- final_weekly_activity_table |> 
+  gt() |> 
+  cols_label(
+    Rank = md("**Rank**"),
+    Name = md("**Name**"),
+    Points = md("**Points**")
+  ) |> 
+  tab_header(
+    title = md("**Weekly Activity Overall Rankings**")
+  ) |> 
+  tab_footnote(
+    footnote = "The scores tend to change based on your performance along the semester."
+  ) |> 
+  cols_width(
+    everything() ~ px(100)  # Adjust the width as needed
+  ) |> 
+  cols_align(
+    align = "center",
+    columns = c(Name,Rank,Points)
+  )
+
+final_survey_test_table_gt <- final_survey_test_table |> 
+  gt() |> 
+  cols_label(
+    Rank = md("**Rank**"),
+    Name = md("**Name**"),
+    Points = md("**Points**")
+  ) |> 
+  tab_header(
+    title = md("**Others(Surveys/Polls/Technology tests etc)**")
+  ) |> 
+  cols_width(
+    everything() ~ px(100)  # Adjust the width as needed
+  ) |> 
+  cols_align(
+    align = "center",
+    columns = c(Name,Rank,Points)
+  )
+
+final_inclass_participation_table_gt <- final_inclass_participation_table  |> 
+  gt() |> 
+  cols_label(
+    Rank = md("**Rank**"),
+    Name = md("**Name**"),
+    Points = md("**Points**")
+  ) |> 
+  tab_header(
+    title = md("**In-Class Participation**")
+  ) |> 
+  cols_width(
+    everything() ~ px(100)  # Adjust the width as needed
+  ) |> 
+  cols_align(
+    align = "center",
+    columns = c(Name,Rank,Points)
+  )
+
+final_teams_participation_table_gt <- final_teams_participation_table  |> 
+  gt() |> 
+  cols_label(
+    Rank = md("**Rank**"),
+    Name = md("**Name**"),
+    Points = md("**Points**")
+  ) |> 
+  tab_header(
+    title = md("**Teams Participation**")
+  ) |> 
+  cols_width(
+    everything() ~ px(100)  # Adjust the width as needed
+  ) |> 
+  cols_align(
+    align = "center",
+    columns = c(Name,Rank,Points)
+  )
+
+final_professionalism_table_gt <- final_professionalism_table  |> 
+  gt() |> 
+  cols_label(
+    Rank = md("**Rank**"),
+    Name = md("**Name**"),
+    Points = md("**Points**")
+  ) |> 
+  tab_header(
+    title = md("**Professionalism**")
+  ) |> 
+  cols_width(
+    everything() ~ px(100)  # Adjust the width as needed
+  ) |> 
+  cols_align(
+    align = "center",
+    columns = c(Name,Rank,Points)
+  )
+
+final_overall_performance_table_gt <- final_overall_performance_table  |> 
+  gt() |> 
+  cols_label(
+    Rank = md("**Rank**"),
+    Name = md("**Name**"),
+    Points = md("**Points**")
+  ) |> 
+  tab_header(
+    title = md("**Overall Participation Score**")
+  )  |> 
+  cols_width(
+    everything() ~ px(100)  # Adjust the width as needed
+  ) |> 
+  cols_align(
+    align = "center",
+    columns = c(Name,Rank,Points)
+  )
+
+
+```
+
+```{r, Convert gt tables to html}
+#| include: false
+#| echo: false
+final_weekly_activity_table_html <- as.character(as_raw_html(final_weekly_activity_table_gt))
+final_survey_test_table_html <- as.character(as_raw_html(final_survey_test_table_gt))
+final_inclass_participation_table_html <- as.character(as_raw_html(final_inclass_participation_table_gt))
+final_teams_participation_table_html <- as.character(as_raw_html(final_teams_participation_table_gt))
+final_professionalism_table_html <- as.character(as_raw_html(final_professionalism_table_gt))
+final_overall_performance_table_html <- as.character(as_raw_html(final_overall_performance_table_gt))
+
+```
+
+
+```{r, Pass data to OJS}
+#| include: false
+#| echo: false
+ojs_define(final_weekly_activity_table_html, final_survey_test_table_html, final_inclass_participation_table_html,final_teams_participation_table_html, final_professionalism_table_html, final_overall_performance_table_html)
+```
+
+```{ojs}
+//| echo: false
+import { Select } from "@observablehq/inputs";
+viewof tableSelector = Select(["Overall Participation Score", "Weekly Activity", "In-Class Participation", "Teams Participation", "Professionalism", "Others(Surveys/Polls/Technology tests etc)"], {label: "Choose a category:"})
+
+
+```
+
+##  {.tabset}
+
+```{ojs}
+//| echo: false
+html`<div id="table-container" style="overflow-x:auto; max-width: 100%;"></div>`
+{
+  const selectedTable = tableSelector;
+  let tableHTML;
+
+  if (selectedTable === "Overall Participation Score") {
+    tableHTML = final_overall_performance_table_html;
+  } else if (selectedTable === "Weekly Activity") {
+    tableHTML = final_weekly_activity_table_html;
+  } else if (selectedTable === "In-Class Participation") {
+    tableHTML = final_inclass_participation_table_html;
+  } else if (selectedTable === "Teams Participation") {
+    tableHTML = final_teams_participation_table_html;
+  } else if (selectedTable === "Professionalism") {
+    tableHTML = final_professionalism_table_html;
+  } else if (selectedTable === "Others(Surveys/Polls/Technology tests etc)") {
+    tableHTML = final_survey_test_table_html;
+  } else {
+    tableHTML = final_overall_performance_table_html;
+  }
+
+  document.getElementById("table-container").innerHTML = tableHTML;
+}
+
+```
+
+::: {.callout-tip}
+## Tip
+
+Stay positive! Your scores fluctuate throughout the semester depending on your performance. Monitor your progress and work consistently to maintain a good academic standing. All the best!
+:::
