@@ -6,13 +6,14 @@ filters:
 
 This interface helps you to improve your R skills. Here you can access to a data set called `starwars`
 
-::: {.callout-tip}
+::: callout-tip
 # Tip
 
 You don't really need a laptop to practice here!😉
 :::
 
 # Load the necessary packages.
+
 ```{webr-r}
 library(tidyverse)
 
@@ -20,23 +21,21 @@ library(tidyverse)
 
 ```
 
-::: {.callout-important}
-
+::: callout-important
 # Caution
 
-The code on this page runs server-less. No code will be saved. Make sure to save your work some where else or you can even download your work by clicking on `View R History` on the top right corner. 
-
+The code on this page runs server-less. No code will be saved. Make sure to save your work some where else or you can even download your work by clicking on `View R History` on the top right corner.
 :::
-# Maniupulations
+
+# Manipulations
 
 For example: Print the `starwars` dataset.
+
 ```{webr-r}
 starwars
 ```
+
 Great! Analyze the `starwars`dataset and start playing around.
-```{webr-r}
-
-```
 
 ```{webr-r}
 
@@ -45,12 +44,17 @@ Great! Analyze the `starwars`dataset and start playing around.
 ```{webr-r}
 
 ```
+
+```{webr-r}
+
+```
+
 ## Use Pipes
-::: {.callout-note}
 
+::: callout-note
 # Note:
-You may not be able to use a pipe on this website. So you can copy it from here ` |> `
 
+You may not be able to use a pipe on this website. So you can copy it from here `|>`
 :::
 
 ```{webr-r}

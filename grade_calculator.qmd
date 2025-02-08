@@ -1,0 +1,141 @@
+---
+title: "Grade Calculator"
+format: html
+filters:
+  - shinylive
+---
+
+```{shinylive-r}
+#| standalone: true
+#| viewerHeight: 600
+
+library(shiny)
+library(bslib)
+
+# Define UI for the application
+ui <- fluidPage(
+  titlePanel("Welcome to Grade Calculator"),
+  p("This will help you project your final grade based on your current/predicted scores."),
+  sidebarLayout(
+    sidebarPanel(
+      h4("Enter your grades (between 0 and 100):"),
+      fluidRow(
+        column(6, numericInput("grade1", "Practice 1:", value = 85, min = 0, max = 100, step = 1)),
+        column(6, numericInput("grade2", "RStudio Skill Test 1:", value = 85, min = 0, max = 100, step = 1)),
+        column(6, numericInput("grade3", "RStudio Skill Test 2:", value = 85, min = 0, max = 100, step = 1)),
+        column(6, numericInput("grade4", "Exam 1:", value = 85, min = 0, max = 100, step = 1)),
+        column(6, numericInput("grade5", "Practice 2:", value = 85, min = 0, max = 100, step = 1)),
+        column(6, numericInput("grade6", "Exam 2:", value = 85, min = 0, max = 100, step = 1)),
+        column(6, numericInput("grade7", "RStudio Skill Test 3:", value = 85, min = 0, max = 100, step = 1)),
+        column(6, numericInput("grade8", "Final Exam:", value = 85, min = 0, max = 100, step = 1)),
+        column(6, numericInput("grade9", "Participation:", value = 85, min = 0, max = 100, step = 1))
+      )
+    ),
+    mainPanel(
+      h3("Your Results"),
+      h4("Based on the scores you entered, your Final Grade is:"),
+      uiOutput("finalGrade"),
+      h4("Based on the scores you entered, your Letter Grade is:"),
+      uiOutput("letterGrade"),
+      h4("Feedback:"),
+      uiOutput("feedback")
+    )
+  )
+)
+
+# Define server logic for the application
+server <- function(input, output, session) {
+  # Reactive expression to calculate the final grade
+  finalGrade <- reactive({
+    # Weightages for the grades
+    weightages <- c(0.05, 0.10, 0.10, 0.12, 0.05, 0.15, 0.15, 0.18, 0.10)
+    
+    # Ensure all inputs are within range
+    grades <- c(input$grade1, input$grade2, input$grade3, input$grade4, input$grade5,
+                input$grade6, input$grade7, input$grade8, input$grade9)
+    grades <- pmax(pmin(grades, 100), 0)
+    
+    # Calculate the final grade
+    grade <- sum(grades * weightages)
+    
+    # Return the final grade rounded to two decimal places
+    round(grade, 2)
+  })
+  
+  output$finalGrade <- renderUI({
+    grade <- finalGrade()
+    if (grade >= 92) {
+      span(grade, style = "color: green; font-size: 24px;")
+    } else if (grade >= 89.5) {
+      span(grade, style = "color: lightgreen; font-size: 24px;")
+    } else if (grade >= 87) {
+      span(grade, style = "color: yellowgreen; font-size: 24px;")
+    } else if (grade >= 82) {
+      span(grade, style = "color: pink; font-size: 24px;")
+    } else if (grade >= 79.5) {
+      span(grade, style = "color: orange; font-size: 24px;")
+    } else if (grade >= 77) {
+      span(grade, style = "color: orangered; font-size: 24px;")
+    } else if (grade >= 69.5) {
+      span(grade, style = "color: red; font-size: 24px;")
+    } else if (grade >= 59.5) {
+      span(grade, style = "color: darkred; font-size: 24px;")
+    } else {
+      span(grade, style = "color: darkred; font-size: 24px;")
+    }
+  })
+  
+  # Determine the letter grade based on the final grade
+  output$letterGrade <- renderUI({
+    grade <- finalGrade()
+    
+    if (grade >= 92) {
+      span("A", style = "color: green; font-size: 24px;")
+    } else if (grade >= 89.5) {
+      span("A-", style = "color: lightgreen; font-size: 24px;")
+    } else if (grade >= 87) {
+      span("B+", style = "color: yellowgreen; font-size: 24px;")
+    } else if (grade >= 82) {
+      span("B", style = "color: pink; font-size: 24px;")
+    } else if (grade >= 79.5) {
+      span("B-", style = "color: orange; font-size: 24px;")
+    } else if (grade >= 77) {
+      span("C+", style = "color: orangered; font-size: 24px;")
+    } else if (grade >= 69.5) {
+      span("C", style = "color: red; font-size: 24px;")
+    } else if (grade >= 59.5) {
+      span("D", style = "color: darkred; font-size: 24px;")
+    } else {
+      span("F", style = "color: darkred; font-size: 24px;")
+    }
+  })
+
+  # Provide feedback based on the final grade
+  output$feedback <- renderUI({
+    grade <- finalGrade()
+    
+    if (grade >= 92) {
+      span("Good job! Keep it up.", style = "color: green; font-size: 20px;")
+    } else if (grade >= 89.5) {
+      span("You are almost there! Great effort.", style = "color: lightgreen; font-size: 20px;")
+    } else if (grade >= 87) {
+      span("Well done! You’re on the right track.", style = "color: yellowgreen; font-size: 20px;")
+    } else if (grade >= 82) {
+      span("Good work! Continue to improve.", style = "color: pink; font-size: 20px;")
+    } else if (grade >= 79.5) {
+      span("You’re doing well, but there’s room for improvement.", style = "color: orange; font-size: 20px;")
+    } else if (grade >= 77) {
+      span("Keep trying, you can do better.", style = "color: orangered; font-size: 20px;")
+    } else if (grade >= 69.5) {
+      span("You’re making progress, but consider extra help.", style = "color: red; font-size: 20px;")
+    } else if (grade >= 59.5) {
+      span("You need to improve significantly.", style = "color: darkred; font-size: 20px;")
+    } else {
+      span("Failing grade. Seek additional support.", style = "color: darkred; font-size: 20px;")
+    }
+  })
+}
+
+# Run the application 
+shinyApp(ui = ui, server = server)
+```

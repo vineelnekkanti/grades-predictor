@@ -1,0 +1,134 @@
+---
+title: "R-Basic Tutorials by Dr.B"
+author: "Venkata Nekkanti"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+editor: visual
+filters: 
+  - webr
+---
+
+```{webr-r}
+# load packages
+library(learnr)
+library(tidyverse)
+
+# don't echo chunks
+knitr::opts_chunk$set(echo = FALSE)
+
+# code checking
+checker <- function(label, user_code, check_code, envir_result, evaluate_result, ...) {
+  list(message = check_code, correct = TRUE, location = "append")
+}
+tutorial_options(exercise.timelimit = 10, exercise.checker = checker)
+```
+
+## Intro to RStudio
+
+The following sections of our book R for Data Science( [first portion of the course book](https://r4ds.hadley.nz) ) are included in the first week:
+
+-   [Introduction](https://r4ds.hadley.nz/intro)
+
+-   [Workflow basics](https://r4ds.hadley.nz/workflow-basics)
+
+-   [Workflow scripts and projects](https://r4ds.hadley.nz/workflow-scripts)
+
+![Data science cycle](https://afit-r.github.io/public/images/data-science.png)
+
+### Link to other resources
+
+-   Internal help: [posit support](https://support.posit.co/hc/en-us)
+
+-   External help: [stackoverflow](https://stackoverflow.com/search?q=rstudio&s=25d8522e-3191-4bf2-ae3b-ccad762aeca9)
+
+-   Additional materials: [posit resources](https://posit.co/resources/)
+
+-   Cheat Sheets: [posit cheat sheets](https://posit.co/resources/cheatsheets/)
+
+While I use the book as a reference the materials provided to you are custom made and include more activities and resources. If you understand the materials covered in this document there is no need to refer to other sources. If you have any troubles with the materials don't hesitate to contact me or check the above sources.
+
+## Getting Started
+
+### Running code in RStudio
+
+If you are running code interactively in the console you just need to enter commands after the prompt sign "\>". If you are running the code from this window (Script Editor) you can press Cmd(Mac)/Ctrl(Windows) + Enter to run a single line of code or highlight multiple line and then press Cmd/Ctrl + Enter.
+
+### Packages installation
+
+You will need to install the packages first before be able to use functions and datasets they contain. This is a one time task unless you uninstall R& RStudio or you change your computer.
+
+```{webr-r}
+install.packages("tidyverse")# main package for the first part of the semester, it is a bundle package (meaning it contains multiple packages that have different purposes e.g., dplyr for manipulations, ggplot for visualizations)
+install.packages(
+  c("arrow", "babynames", "curl", "duckdb", "gapminder", 
+    "ggrepel", "ggridges", "ggthemes", "hexbin", "janitor", "Lahman", 
+    "leaflet", "maps", "nycflights13", "openxlsx", "palmerpenguins", 
+    "repurrrsive", "tidymodels", "writexl")
+  )#install multiple packages that will be useful throught the semester
+```
+
+### Load packages
+
+This is a critical task. Every time you open a new RStudio session you will need to load the packages. Failing to do so will incur in the most common errors among beginners (e.g., function not found or object not found)
+
+```{webr-r}
+library(tidyverse)
+#Take careful note of the conflicts message that’s printed when you load the tidyverse. It tells you that dplyr overwrites some functions in base R. If you want to use the base version of these functions after loading dplyr, you’ll need to use their full names: stats::filter() and stats::lag().
+library(nycflights13)
+```
+
+
+### Need help
+
+If you are stuck promise me not to quit! You are a beginner so it will happen. Just pay attention to the error message and look at the below option to find a solution.
+
+```{webr-r}
+#look into the R community or Stackoverflow
+#use help ribbon
+?library# help on a specific function
+example("sum")# example on how to use the function
+<- }#moreover if something is wrong with your code Rstudio will signal it to you.
+
+```
+
+## Workflow basic script
+
+You can use R as a calculator..
+
+```{webr-r}
+#run basic calculations
+10 / 100 * 30
+(59 + 73 + 2) / 3
+sum(10 / 2, 3)
+
+```
+
+### Creating Object using the Assignement operator
+
+But it can do much more.. so we need to learn how to create and manage object using the assignment operator.
+
+```{webr-r}
+class_size <- 48
+# "<-" # is the assign operator and it means you are assigning value to an object/variable. The shortcut option/alt + - will create the assign symbol
+```
+
+#### How to name your objects?
+
+Object names must start with a letter, and can only contain letters, numbers, \_ and .. You want your object names to be descriptive, so you'll need a convention for multiple words.
+
+```{webr-r}
+welcome_to_rstudio<- "Welcome" #always use meaningful names but if they are long separate them with a _.
+welcome_to_rstudio# by running this line you are able to inspect the object/variable
+
+this_is_a_really_long_name_completely_unnecessary <- 2.5 # instead of writing the entire name learn that the tab key allows you to autocomplete
+this #try the autocompletion feature; we will cover other trick about the tab key later
+
+r_rocks <- 2 ^ 3
+#what happen if I run the following lines; why?
+r_rock
+R_rocks
+
+
+```
+
+
+
